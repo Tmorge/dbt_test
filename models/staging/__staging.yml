@@ -1,22 +1,36 @@
 version: 2
 models:
   - name: stg_dbt_test__raw_orders
+    description: order headers with monetary amounts and currency.
     columns:
       - name: order_id
+        constraints:
+          - type: primary_key
         tests:
           - not_null
           - unique
-
-  - name: stg_dbt_test__raw_customers
-    columns:
       - name: customer_id
         tests:
           - not_null
+
+
+  - name: stg_dbt_test__raw_customers
+    description: customer attributes and timestamps
+    columns:
+      - name: customer_id
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
           - unique
+        
 
   - name: stg_dbt_test__raw_order_items
+    description: order line items
     columns:
       - name: order_item_id
+        constraints:
+          - type: primary_key
         tests:
           - not_null
           - unique
