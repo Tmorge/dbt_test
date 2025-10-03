@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: int_orders_with_order_items
+    description: orders joined to order line items with standardized currency.
+    columns:
+      - name: order_item_id
+        tests:
+          - not_null
+          - unique
+              

@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: agg_daily_revenue_last_30_days
+    columns:
+      - name: order_date
+        tests:
+          - not_null
+          - unique
+              
