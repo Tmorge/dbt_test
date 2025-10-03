@@ -1,0 +1,6 @@
+sources:
+  - name: dbt_test
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_order_items
